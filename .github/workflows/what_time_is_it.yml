@@ -10,8 +10,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out repository
-      uses: actions/checkout@v2
-
     - name: Run date command
-      run: date
+      run: echo "Current date and time $(date)"
