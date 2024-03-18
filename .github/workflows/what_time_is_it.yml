@@ -1,0 +1,17 @@
+name: Run Date Command on Commit
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run_date_command:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+
+    - name: Run date command
+      run: date
