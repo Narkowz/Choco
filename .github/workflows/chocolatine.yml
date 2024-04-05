@@ -18,6 +18,7 @@ jobs:
     
       - name: Check if repo is the mirror
         run: |
+          echo $GITHUB_REPOSITORY
           if ["$GITHUB_REPOSITORY" != "B-DOP-200-STG-2-1-chocolatine-attilio.jaeger"]; then
             echo "We are not in the mirror"
             exit 0
