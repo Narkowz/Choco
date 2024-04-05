@@ -15,11 +15,12 @@ jobs:
     steps:
       - name: Check if repo is the mirror
         run: |
-          if "$GITHUB_REPOSITORY" != "B-DOP-200-STG-2-1-chocolatine-attilio.jaeger.git"
+          if "$GITHUB_REPOSITORY" != "B-DOP-200-STG-2-1-chocolatine-attilio.jaeger.git"; then
             echo "We are not in the mirror"
           else
             echo "We are in the mirror"
             exit 1
+          fi
 
   check_coding_style:
     runs-on: ubuntu-latest
