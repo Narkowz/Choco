@@ -16,14 +16,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
     
-      - name: Check if repo is the mirror
+      - name: Check if mirror
         run: |
-          echo $GITHUB_REPOSITORY
-          if [$GITHUB_REPOSITORY != "EpitechPromo2028/B-DOP-200-STG-2-1-chocolatine-attilio.jaeger"]; then
-            echo "We are not in the mirror"
-            exit 0
+          if [ "$GITHUB_REPOSITORY" != "EpitechPromo2028/B-DOP-200-STG-2-1-chocolatine-attilio.jaeger" ]; then
+            echo "We are not in mirror"
           else
-            echo "We are in the mirror"
+            echo "We are in mirror"
             exit 1
           fi
 
