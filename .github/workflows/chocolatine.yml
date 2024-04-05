@@ -20,6 +20,7 @@ jobs:
         run: |
           if ["$GITHUB_REPOSITORY" != "EpitechPromo2028/B-DOP-200-STG-2-1-chocolatine-attilio.jaeger"]; then
             echo "We are not in the mirror"
+            exit 0
           else
             echo "We are in the mirror"
             exit 1
